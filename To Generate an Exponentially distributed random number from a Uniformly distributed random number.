@@ -1,0 +1,11 @@
+clc;
+clear all;
+close all;
+n=500;
+a=zeros(n,1);
+lamb=5;
+x = rand(n,1); %generate uniformly distributed random number
+for i=1:n
+a(i)=lamb*exp(-lamb*x(i)); %exponential distribution
+end
+histogram(a,(n/10))
