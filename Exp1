@@ -1,3 +1,6 @@
+Aim: To Generate exponential distributed random number from uniformly
+distributed random number
+
 clc;
 close all;
 N = 100000;
