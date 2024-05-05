@@ -1,0 +1,13 @@
+clc;
+close all;
+N = 100000;
+u = rand(1, N);
+X = -log(1 - u);
+range = 0:0.1:5; % Define the range here
+h = histc(X, range);
+Theory_pdf = exp(-range);
+sim_pdf = h / (0.1 * sum(h));
+plot(range, Theory_pdf);
+hold on;
+plot(range, sim_pdf, 'k*');
+legend('Theory', 'Simulated');
