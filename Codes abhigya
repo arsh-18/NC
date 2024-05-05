@@ -1,0 +1,44 @@
+
+close all;
+clear all; 
+STOP AND WAIT
+clc; 
+n = 8;%number of frames 
+i = 1; 
+while i<n 
+fprintf('Transmitting frame %d\n',i); 
+s = randi(10,1,1); 
+if s<=3 
+fprintf('Time out \n %d\n',i); 
+else 
+fprintf('Received frame %d\n',i); 
+i = i+1; 
+end 
+end
+
+
+
+
+GO BACK N / SLIDING WINDOW
+clc;
+clear all;
+close all;
+n = 3;
+frames = 10;
+i = 1;
+j = 1;
+while(i<frames)
+    if(j-i < n)
+        fprintf(" Transmitted %d \n", j);
+        j = j + 1;
+    else
+        s = randi(10,1,1);
+        if(s >= 8)
+            fprintf(" Time Out %d \n ", i);
+            j = i;
+        else
+            fprintf(" Received frame %d \n", i);
+            i = i + 1;
+        end
+    end
+end
