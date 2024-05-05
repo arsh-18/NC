@@ -22,7 +22,7 @@
 % num2= [k2 2*k2]; 
 % num3=[k3 2*k3];
 % den=[5 1 0];
-% funcl=tf(num], den) ; 
+% funcl=tf(num1, den) ; 
 % func2=tf(num2, den) ; 
 % func3=tf(num3, den) ;
 % nyquist(funcl, func2, func3);
